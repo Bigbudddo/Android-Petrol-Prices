@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewSwitcher 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bgrnd"
+    android:id="@+id/vwSwitch" >
+	
+	<LinearLayout 
+    	android:orientation="vertical"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:gravity="center"
+    	android:padding="5sp" >
+
+	    <TextView  
+			android:id="@+id/labelCategory"
+    		android:layout_width="fill_parent" 
+    		android:layout_height="wrap_content" 
+    		android:layout_marginLeft="30sp"
+    		android:text="@string/entercategory"
+    		android:textColor="#000000" />
+	    
+		<Spinner
+		    android:id="@+id/category"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="35sp"
+    		android:layout_marginRight="35sp"
+		    android:prompt="@string/locationprompt"
+		    android:entries="@array/categories" />
+	    
+    	<TextView  
+			android:id="@+id/labelTown"
+    		android:layout_width="fill_parent" 
+    		android:layout_height="wrap_content"
+    		android:layout_marginLeft="30sp"
+    		android:text="@string/enterlocation"
+    		android:textColor="#000000" />
+
+	    <EditText
+	        android:id="@+id/townValue"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="35sp"
+    		android:layout_marginRight="35sp"
+	        android:text="" android:inputType="text"/>
+	 
+		<Button 
+			android:id="@+id/searchButton"
+    		android:layout_width="fill_parent" 
+    		android:layout_height="wrap_content"
+    		android:layout_marginLeft="40sp"
+    		android:layout_marginRight="40sp"
+    		android:text="@string/search" />
+	</LinearLayout> 
+
+	
+	<LinearLayout 
+    	android:orientation="vertical"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent" >	
+    	
+	    <Button 
+			android:id="@+id/backButton"
+    		android:layout_width="fill_parent" 
+    		android:layout_height="wrap_content" 
+    		android:text="@string/back" /> 
+	    
+	    <ScrollView
+		    android:id="@+id/scrollView"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginBottom="45sp" >
+		    	<LinearLayout 
+		    	    android:id="@+id/resultDisplay"
+        			android:layout_height="wrap_content"
+        			android:layout_width="match_parent"
+        			android:orientation="vertical"
+        			android:gravity="center">
+
+		    		<TextView
+		    		    android:id="@+id/pleaseWaitText"
+		    		    android:layout_width="wrap_content"
+		    		    android:layout_height="wrap_content"
+		    		    android:text="@string/loadingresults"
+		    		    android:textColor="#000000" />
+
+		    		<ProgressBar
+		    		    android:id="@+id/progressBar"
+		    		    android:layout_width="wrap_content"
+		    		    android:layout_height="wrap_content" />
+
+        		</LinearLayout>
+		</ScrollView>
+	</LinearLayout>
+	
+</ViewSwitcher> 
